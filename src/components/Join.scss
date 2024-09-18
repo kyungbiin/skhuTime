@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap'); //skhu 로고 
+.join-container {
+  font-family: "Nanum Gothic", sans-serif;
+    display: flex;
+    justify-content: center;
+   
+    height: 100vh;
+
+  }
+  
+  .join-form {
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  #joinTitle{
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 45px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #subTitle{
+   font-size: 20px;
+    margin-top: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+
+  
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .join-button, .subject-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7092b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .join-button:hover, .subject-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .selected-subjects {
+    margin-top: 10px;
+    
+    color: #555;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal h3 {
+    margin-top: 0;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .check_input{
+    width: auto;
+  }
+  
+  .subject-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .subject-list li {
+    margin-bottom: 10px;
+  }
+  
+  .close-modal {
+    width: 100%;
+    padding: 10px;
+    background-color: #7092b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .close-modal:hover {
+    background-color: #0056b3;
+  }
+  

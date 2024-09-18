@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+
+#sidebar {
+    width: 140px; /* 사이드바의 너비 */
+    height: auto; /* 화면 전체 높이 */
+    background-color: #ffffff; /* 배경색 */
+
+  /* 아이템들을 수직으로 정렬 */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    text-align: center;
+    overflow: hidden;
+   
+   
+       
+   
+  }
+  
+  #sidebar a {
+    font-family: "Nanum Gothic", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px; /* 링크들의 모서리를 둥글게 */
+    text-decoration: none; /* 링크의 기본 밑줄 제거 */
+    transition: background-color 0.3s ease; /* 호버 시 배경색 변경을 부드럽게 */
+ 
+}
+  
+#sidebar a:hover,
+#sidebar a:focus {
+  background-color: #e9ecef; /* 호버 시 및 활성화된 링크의 배경색 변경 */
+}
+
+#sidebar a svg {
+  margin-right: 10px; /* 아이콘과 텍스트 간의 간격 */
+  font-size: 24px;
+}
