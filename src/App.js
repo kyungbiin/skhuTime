@@ -9,6 +9,8 @@ import Join from './components/Join';
 import Main from './components/Main';
 import './App.scss';
 import Profile from './components/Profile';
+import BoardDetail from './components/BoardDetail';
+import BoardWrite from './components/BoardWrite';
 
 function AppContent() {
   const location = useLocation();
@@ -26,6 +28,7 @@ function AppContent() {
           <Route path="/boardList" element={ <BoardList /> } />
           <Route path="/login" element={ <Login /> } />
           <Route path="/chat" element={ <ChatList /> } />
+          <Route path="/boardWrite" element={ <BoardWrite /> } />
           <Route path="/chatRoom/:chatName" element={ <ChatRoom /> } />
           <Route path="/join" element={ <Join /> } />
           <Route path="/profile" element={ <Profile /> } />

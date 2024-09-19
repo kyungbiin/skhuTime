@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Link 컴포넌트 import
 import './BoardList.scss';
 import { CiSearch } from "react-icons/ci";
 import noSearch from '../img/noSearch.png';
@@ -13,7 +14,7 @@ const BoardList = ({ hideSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
-  //검색 핸들링 
+  // 검색 핸들링
   const handleSearch = () => {
     const filtered = posts.filter((post) =>
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -42,7 +43,10 @@ const BoardList = ({ hideSearch }) => {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
             <div key={post.id} className="board-item">
-              <h3 className="board-title">{post.title}</h3>
+              {/* 게시물 제목을 클릭하면 상세 페이지로 이동 */}
+              <Link to={`/boardDetail/${post.id}`} className="board-title-link">
+                <h3 className="board-title">{post.title}</h3>
+              </Link>
               <p className="board-content">{post.content}</p>
               <div className="board-footer">
                 <span className="board-author">{post.author}</span>
