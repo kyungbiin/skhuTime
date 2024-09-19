@@ -29,6 +29,7 @@ function AppContent() {
           <Route path="/chatRoom/:chatName" element={ <ChatRoom /> } />
           <Route path="/join" element={ <Join /> } />
           <Route path="/profile" element={ <Profile /> } />
+          <Route path="/boardDetail/:id" element={ <BoardDetail />}></Route>
         </Routes>
       </div>
     </div>
