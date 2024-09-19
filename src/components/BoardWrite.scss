@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+// BoardWrite.scss
+
+// 전체 컨테이너
+.board-write-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  max-height: 80vh; /* 화면의 80% 높이까지만 사용 */
+  overflow-y: auto;
+}
+
+// 제목
+.board-write-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+// 폼 스타일
+.board-write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// 각 입력 필드와 텍스트 영역
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+  }
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+
+
+  .board-write-rules {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-left: 4px solid #f1f1f1;
+    border-radius: 4px;
+    height: 200px;
+    //max-height: 200px; /* 규칙 섹션에도 스크롤 기능 추가 */
+    overflow-y: hidden; 
+  }
+  
+  .board-write-rules h2 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #777;
+  }
+  
+  .board-write-rules p {
+    font-size: 12px;
+    color: #777; /* 일반 문구는 연한 회색 */
+    margin-bottom: 10px;
+  }
+  
+  .board-write-rules strong {
+    color: #777; 
+  }
+  
+  .board-write-rules ul {
+    margin-left: 10px;
+    list-style-type: disc;
+    color: #777
+  }
+  
+  .board-write-rules ul li {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  /* 체크박스 스타일 */
+  .agree-checkbox{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+
+    label{
+      display: flex;
+      align-items: center;
+      font-size:12px;
+      color:#777;
+      white-space: nowrap;
+      margin-left: 4px;
+    }
+
+    input[type="checkbox"]{
+      margin-right:4px;
+
+    }
+
+
+  }
+
+// 제출 버튼
+.submit-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: center;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
