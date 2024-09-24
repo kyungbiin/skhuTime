@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './BoardWrite.scss';
+import Swal from 'sweetalert2';
 
 const BordWrite = () => {
   const [title, setTitle] = useState(''); // 제목을 위한 상태값 관리
@@ -7,25 +8,40 @@ const BordWrite = () => {
   const [agreed, setAgreed] = useState(false); //규칙 동의 체크박스를 위한 상태값 관리
 
   // 폼 제출 시 호출되는 함수
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault(); // 폼 제출 시 페이지 새로고침 방지
 
     // 사용자가 규칙에 동의하지 않는 경우
     if(!agreed){
-      alert('커뮤니티 이용규칙에 동의해야 합니다.'); // 경고 메시지
+      //경고 메시지
+      await Swal.fire({
+        title: '경고',
+        text: '커뮤니티 이용규칙에 동의해야 합니다.',
+        icon: 'warning',
+        confirmButtonText: '확인',
+      });
       return; // 동의하지 않았으면 제출하지 않음.
     }
 
-    // 기본 확인 창을 사용
-    const confirmed = window.confirm('Skhu Time에 게시글을 업로드 하시나요?'); //확인 팝업
-    if (confirmed) {
+    // SweetAlert2로 확인 팝업을 띄우기
+    const result = await Swal.fire({
+      title: 'Skhu Time에 게시글을 업로드 하시나요?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: '예',
+      cancelButtonText: '아니요',
+    });
 
-      /*만약 팝업 창 없앨 거면 위 두 줄만 없애 삼 밑에 있는 console.log 두개는 있어야 되는 거임.*/
+
+    
+    if (result.isConfirmed) {
       // 확인 팝업에서 "예"를 선택한 경우
       console.log('제목: ', title);
       console.log('내용: ', content);
-    // 실제 제출 로직을 여기에 추가
-    
+      // 실제 제출 로직을 여기에 추가
+    } else {
+      // "아니요"를 선택한 경우
+      Swal.fire('취소되었습니다.', '', 'info');
     }
   };
 

@@ -61,6 +61,12 @@ const BoardList = ({ hideSearch }) => {
           </div>
         )}
       </div>
+
+      {/* 게시글 작성 버튼 */}
+      <Link to="/boardWrite" className="write-button">
+        게시글 작성
+      </Link>
+      
     </div>
   );
 };
