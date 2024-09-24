@@ -63,9 +63,12 @@ const BoardList = ({ hideSearch }) => {
       </div>
 
       {/* 게시글 작성 버튼 */}
-      <Link to="/boardWrite" className="write-button">
-        게시글 작성
-      </Link>
+      {window.location.pathname === '/boardList' && (
+  <Link to="/boardWrite" className="write-button">
+    게시글 작성
+  </Link>
+)}
+
       
     </div>
   );
